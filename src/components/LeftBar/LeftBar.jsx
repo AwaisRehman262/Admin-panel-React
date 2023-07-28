@@ -3,9 +3,9 @@ import { LeftBarView } from './LeftBarView.jsx'
 
 export const LeftBar = () => {
   const links = [
-    { link: "/HomePage", heading: "HomePage"},
-    { link: "/UsersPanel", heading: "Users Panel" },
-    { link: "/ProductsPanel", heading: "Products Panel" }
+    // { link: "/HomePage", heading: "HomePage" }
+    ,{ link: "/UsersPanel", heading: "Users Panel" }
+    ,{ link: "/ProductsPanel", heading: "Products Panel" }
   ]
   return (
     <Fragment>
