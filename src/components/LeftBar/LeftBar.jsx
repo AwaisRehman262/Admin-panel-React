@@ -13,7 +13,7 @@ export const LeftBar = () => {
         <h1>Dashboard</h1>
         <nav>
           <ul>
-            {links.map(x => <LeftBarView link={x.link} heading={x.heading} />)}
+            {links.map(link => <LeftBarView link={link.link} heading={link.heading} />)}
           </ul>
         </nav>
       </div>
