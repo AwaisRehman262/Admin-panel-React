@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { DataGrid, GridDeleteIcon, renderActionsCell } from '@mui/x-data-grid'
+import React, { useState } from 'react'
+import { DataGrid, GridDeleteIcon} from '@mui/x-data-grid'
 import { Products } from '../Data/Products'
 import { Button } from '@mui/material'
 
 export const ProductsPanel = () => {
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    setData(Products)
-  }, [])
+  
+  const [data, setData] = useState(Products)
 
   const deleteHandler = (row) => {
-    console.log(row)
     const deleteConfirmation = confirm(`Do you wannna delete ${row.title} with id "${row.id}"`)
     if (deleteConfirmation) {
       setData(data.filter(product => product.id !== row.id))
@@ -42,7 +38,7 @@ export const ProductsPanel = () => {
     {
       field: 'edit', headerName: 'Delete', sortable: false,
       renderCell: ({ row }) => {
-        return <Button onClick={() => editHandler(row)} variant="contained" startIcon={<GridDeleteIcon />} size='small'>Edit</Button>
+        return <Button onClick={() => editHandler(row)} variant="contained" size='small'>Edit</Button>
       }
     }
   ]
